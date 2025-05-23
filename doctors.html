@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+	<title>Shulife - Doctors</title>
+      <link rel="icon" type="image/x-icon" href="favicon-01.png">
+
+
+	<meta name="keywords" content="Caremed HTML5 Responsive Template Medicine COVID-19 Corona Hospital" />
+	<meta name="description" content="Caremed - Hospital HTML5 Responsive Template">
+	
+	
+    <link rel="stylesheet" href="assets/css/style.css">
+
+	
+	
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="assets/js/app.js" defer></script>
+
+</head>
+<body>
+    <!------------------------------------------------
+	loading overlay - start
+	------------------------------------------------>
+	<div class="loading-screen">
+        <img src="assets/images/SHULIFE-03.png" alt="جارٍ التحميل...">
+  </div>
+	<!------------------------------------------------
+	loading overlay - end
+	------------------------------------------------>
+    <div class="page-wrapper">
+        <!------------------------------------------------
+		navigation - start
+		------------------------------------------------>
+    <header class="header">
+            <div class="header-top">
+                <div class="top-manu">
+					<ul class="top-list">
+                        <li>
+							<i class="bi bi-telephone-fill"></i>
+							009642873122650 
+						</li>
+                        <li>
+							<i class="bi bi-envelope-fill"></i>
+							therapy.online.2025@gmail.com
+						</li>
+                    </ul>
+				</div> 
+            </div>
+            <div class="header-middle-sticky-header">
+                <div class="header-left">
+                    <img src="assets/images/logo.png" alt="Caremed Logo" width="185" height="48">
+                </div>
+                <div class="header-right">
+                   
+                    <nav class="main-nav">
+                        <ul class="ul-menu">
+                                <li>
+                                    <a href="index.html">الصفحة الرئيسية</a>
+                                </li>
+                                <li>
+                                    <a href="about.html">من نحن</a>
+                                </li>
+                                <li>
+                                   <a href="doctors.html">فريقنا</a>
+                                </li>
+                                <li>
+                                    <a href="contact-us.html">تواصل معنا</a>
+                                </li>
+                            </ul>
+                    </nav><!-- End .main-nav -->
+                    
+                    <a href="appointment-step2.html" class="btn-appointment">
+						<span>احجز موعد</span>
+					</a>
+                    <a href="login.html" class="btn-login">
+						<span>تسجيل الدخول</span>
+					</a>
+                </div>
+            </div>
+        </header>
+    <!-----------------------------------------------
+		navigation - end
+		------------------------------------------------>
+    		<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="bi bi-chevron-double-up"></i></button>
+        <main class="main">
+            <!------------------------------------------------
+		    page header - start
+		    ------------------------------------------------>
+            <div class="page-header bg-more-light">
+                <div class="container">
+                    <h1 class="page-title">فريقنا</h1>
+                </div>
+            </div>
+            <!------------------------------------------------
+		    page header - end
+		    ------------------------------------------------>
+            <!------------------------------------------------
+		    doctor list - start
+		    ------------------------------------------------>
+            <div class="doctor-cards">
+                <div class="cards-box-3">
+                    <div class="card-doctor">
+                        <div class="image-doctor">
+                          <img src="assets/images/team/girl.png">
+                        </div>
+                        <div class="info-container">
+                          <div class="info-doctor">
+                            <h3>د.عذراء رضا</h3>
+                          </div>
+                          <div class="extra-info">
+                            طبيبة نفسية استشارات نفسية
+                          </div>
+                        </div>
+                    </div> 
+                    <div class="card-doctor">
+                        <div class="image-doctor">
+                          <img src="assets/images/team/boy.png">
+                        </div>
+                        <div class="info-container">
+                          <div class="info-doctor">
+                            <h3>هدير فاروق محمد</h3>
+                          </div>
+                          <div class="extra-info">
+                            تقني صحة مجتمع تخصص التغذيه العلاجيه والمشورةالتغذوية
+                          </div>
+                        </div>
+                    </div> 
+                    <div class="card-doctor">
+                        <div class="image-doctor">
+                          <img src="assets/images/team/boy.png">
+                        </div>
+                        <div class="info-container">
+                          <div class="info-doctor">
+                            <h3>د.احمد فاروق محمد</h3>
+                          </div>
+                          <div class="extra-info">
+                            اختصاص دكتوراه علم النفس الاجتماعي
+                          </div>
+                        </div>
+                    </div> 
+                    <div class="card-doctor">
+                        <div class="image-doctor">
+                          <img src="assets/images/team/girl.png">
+                        </div>
+                        <div class="info-container">
+                          <div class="info-doctor">
+                            <h3>أ.د. مها محمد صالح</h3>
+                          </div>
+                          <div class="extra-info">
+                            تدريسية في قسم التربية البدنية
+                          </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <!------------------------------------------------
+		    doctor list - end
+            ------------------------------------------------>
+		   
+        </main>
+        <!------------------------------------------------
+		footer - start
+		------------------------------------------------>
+        <footer class="footer">
+			<div class="footer-content">
+			  <p>2025 All Rights Reserved</p>
+			  <img src="assets/images/logo-sm.png" alt="Logo">
+			</div>
+		</footer>
+		<!------------------------------------------------
+		footer - end
+		------------------------------------------------>
+    </div>
+    
+    <script>
+		  window.addEventListener('load', function() {
+      const loadingScreen = document.querySelector('.loading-screen');
+      const pageWrapper = document.querySelector('.page-wrapper');
+
+      loadingScreen.classList.add('loaded');
+      setTimeout(() => {
+        pageWrapper.classList.add('loaded');
+        }, 500); // تأخير نصف ثانية (500 مللي ثانية)
+      });
+	</script>
+  <!--mouse-->
+  <script>
+
+        let mybutton = document.getElementById("myBtn");
+
+		
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+		
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+  </script>
+</body>
+</html>

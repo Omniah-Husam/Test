@@ -1,0 +1,421 @@
+
+<html lang="ar">
+<head>
+	<meta charset="UTF-8">~
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+	<title>Shulife</title>
+	  <link rel="icon" type="image/x-icon" href="favicon-01.png">
+
+
+	<meta name="keywords" content="علاج نفسي اونلاين" />
+	<meta name="description" content="علاج نفسي مع لياقة بدنية ونظام غذائي">
+		
+	
+	<link rel="stylesheet" href="assets/css/style.css">
+
+	
+	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+	<style>
+		
+.card-content {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.card-content.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+	</style>
+
+
+</head>
+<body>
+	
+	<div class="loading-screen">
+        <img src="assets/images/SHULIFE-03.png" alt="جارٍ التحميل...">
+    </div>
+	<!------------------------------------------------
+	loading overlay - end
+	------------------------------------------------>
+    <div class="page-wrapper">
+		<!------------------------------------------------
+		navigation1 - start
+		------------------------------------------------>
+		<header class="header">
+            <div class="header-top">
+                <div class="top-manu">
+					<ul class="top-list">
+                        <li>
+							<i class="bi bi-telephone-fill"></i>
+							009647822130562
+						</li>
+                        <li>
+							<i class="bi bi-envelope-fill"></i>
+							therapy.online.2025@gmail.com
+						</li>
+                    </ul>
+				</div> 
+            </div>
+            <div class="header-middle-sticky-header">
+                <div class="header-left">
+                    <img src="assets/images/logo.png" alt="Caremed Logo" width="185" height="48">
+                </div>
+                <div class="header-right">
+                   <nav class="main-nav">
+                        <ul class="ul-menu">
+                                <li>
+                                    <a href="index.html">الصفحة الرئيسية</a>
+                                </li>
+                                <li>
+                                    <a href="about.html">من نحن</a>
+                                </li>
+                                <li>
+                                   <a href="doctors.html">فريقنا</a>
+                                </li>
+                                <li>
+                                    <a href="contact-us.html">تواصل معنا</a>
+                                </li>
+                        </ul>
+                    </nav>                    
+                    <a href="appointment-step2.html" class="btn-appointment">
+						<span>احجز موعد</span>
+					</a>
+                    <a href="login.html" class="btn-login">
+						<span>تسجيل الدخول</span>
+					</a>
+                </div>
+            </div>
+        </header>
+		<!------------------------------------------------
+		navigation - end
+		------------------------------------------------>
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="bi bi-chevron-double-up"></i></button>
+		<!-----------------------------------------------
+		slideshow - start
+		----------------------------------------------->
+		<main class="main">
+			<!-- Slideshow container -->
+            <div class="slideshow-container">
+				<div class="mySlides fade">
+				  <img src="assets/images/slides-index/mental-healthy.jpg">
+				</div>
+	            <div class="mySlides fade">
+					<img src="assets/images/slides-index/sport.jpg">
+					
+				</div>
+	            <div class="mySlides fade">
+					<img src="assets/images/slides-index/healthy-food.jpg">
+				</div>
+	            <!-- الأسهم -->
+	            <a class="prev" onclick="plusSlides(-1)">
+					<i class="bi bi-arrow-left-circle" style="font-size: 3rem; color: #333;"></i>
+				</a>
+	            <a class="next" onclick="plusSlides(1)">
+					<i class="bi bi-arrow-right-circle" style="font-size: 3rem; color: #333;"></i>
+				</a>
+            </div>
+  
+            <!-- الدوائر -->
+            <div style="text-align:center">
+				<span class="dot" onclick="currentSlide(1)"></span>
+				<span class="dot" onclick="currentSlide(2)"></span>
+				<span class="dot" onclick="currentSlide(3)"></span>
+			</div>
+			  
+			  
+		 
+	    <!-----------------------------------------------
+		slideshow - end
+		----------------------------------------------->
+            <div class="widgetbackground">
+				<div class="widget">
+					<h4 >
+						<i class="bi bi-clock"></i>ساعات العمل
+					</h4>
+					<p>
+						يرجى التحقق أدناه لمعرفة ساعات العمل لدينا طوال الأسبوع باستثناء يوم الجمعة.
+					</p>
+					<div class="widget-hours">
+						<span class="days">السبت - خميس</span>
+						<span class="time">9:00<sup>AM</sup> — 9:00<sup>PM</sup></span>
+						
+					</div>
+				</div>
+				<img src="assets/images/SHULIFE-03-03.png" alt="heart-logo">
+			</div>
+			
+			<!-----------------------------------------------
+		    cards - start
+		    ----------------------------------------------->
+
+			<div class="membership-section">
+				<h2 class="section-heading">خطط الأشتراك</h2>
+				<div class="row">
+			      <div class="card-content bg-orange">
+					<figure>
+					  <i class="bi bi-heart-pulse-fill"></i>
+					</figure>
+					<div class="price-box">
+					  <p class="member-type">شهري</p>
+					  <p class="member-price">$75/mo</p>
+					</div>
+					<ul class="card-menu">
+					  <li><i class="bi bi-check"></i>جلستين شهرية مع اخصائية نفسية</li>
+					  <li><i class="bi bi-check"></i>جلسة شهرية مع اخصائية تغذية و لياقة بدنية</li>
+					  <li><i class="bi bi-check"></i>دعم مباشر</li>
+					  <li style="visibility: hidden;">عنصر مخفي</li>
+					  <li style="visibility: hidden;">عنصر مخفي</li>
+					</ul>
+					<div class="btn-link">
+					  <a href="appointment-step2.html">اشترك الآن</a>
+					</div>
+				  </div>
+				  <div class="card-content bg-turquoise">
+					<figure>
+					  <i class="bi bi-heart-pulse-fill"></i>
+					</figure>
+					<div class="price-box">
+					  <p class="member-type">ربع سنوي</p>
+					  <p class="member-price">$200/3mo</p>
+					</div>
+					<ul class="card-menu">
+					  <li><i class="bi bi-check"></i>ثلاث جلسات شهرية مع اخصائية نفسية</li>
+					  <li><i class="bi bi-check"></i>جلسة شهرية مع اخصائية تغذية و لياقة بدنية</li>
+					  <li><i class="bi bi-check"></i>جلسة نفسية واحدة مجانية</li>
+					  <li><i class="bi bi-check"></i>دعم مباشر</li>
+					  <li style="visibility: hidden;">عنصر مخفي</li>
+					</ul>
+					<div class="btn-link-01">
+					  <a href="appointment-step2.html">اشترك الآن</a>
+					</div>
+				  </div>
+			      <div class="card-content bg-pink">
+					<figure>
+					  <i class="bi bi-heart-pulse-fill"></i>
+					</figure>
+					<div class="price-box">
+					  <p class="member-type">سنوي</p>
+					  <p class="member-price">$800/yr</p>
+					</div>
+					<ul class="card-menu">
+					  <li><i class="bi bi-check"></i>ثلاث جلسات شهرية مع اخصائية نفسية</li>
+					  <li><i class="bi bi-check"></i>جلسة شهرية مع اخصائية تغذية و لياقة بدنية</li>
+					  <li><i class="bi bi-check"></i>ثلاث جلسات اضافية مجانية خلال السنة</li>
+					  <li><i class="bi bi-check"></i>دعم مباشر</li>
+					  <li><i class="bi bi-check"></i>تقارير شهرية</li>
+					</ul>
+					<div class="btn-link">
+					  <a href="appointment-step2.html">اشترك الآن</a>
+					</div>
+				  </div>
+				</div>
+			</div>
+			<!-----------------------------------------------
+		    cards - start
+		    ----------------------------------------------->
+            <div class="banner-content">
+				<div class="banner-content-wrapper">
+					<h2 class="banner-title">
+						نحن نقدم رعاية عالية الجودة تعالج الجميع
+					</h2>
+			    </div>
+				<div class="row-01">
+					<div class="icon-box">
+						<figure>
+							<i class="bi bi-person"></i>
+						</figure>
+						<div class="icon-box-content">
+							<h4 class="box-title">شخصي</h4>
+						</div>    
+					</div>
+					
+					<div class="icon-box">
+						<figure>
+							<i class="bi bi-person-hearts"></i>
+						</figure>
+						<div class="icon-box-content">
+							<h4 class="box-title">اطفال</h4>
+						</div>
+					</div>
+					<div class="icon-box">
+						<figure>
+							<i class="bi bi-people"></i>
+						</figure>
+						<div class="icon-box-content">
+							<h4 class="box-title">عائلي</h4>
+						</div>
+					</div>
+				</div>
+			</div>		
+            <div class="container-12">
+						<div class="banner-content-12">
+							<div class="row-12">
+								<div class="banner-content-wrapper-12">
+									<h2 class="banner-title-12">
+										نحن طريقك للتعافي
+									</h2>
+									<p class="banner-info-12">
+										شولايف الحل الإكتروني المتكامل للذين يشعرون بالحزن أو القلق أو يعانون من مشاكل الحياة. 
+										تحتوي هذه المنصة الالكترونية على وسائل التقييم الدقيقة لمعرفة ما قد تعاني منه، و توفر لك خيارات العلاج لحل تلك المشاكل
+									</p>
+								</div>	
+							</div>
+							<div class="row-12">
+								<div class="icon-box-12">
+									<figure>
+										<img src="assets/images/steps-therapy/open.png" >
+									</figure>
+									<div class="icon-box-content-12">
+										<h4 class="box-title">افتح موقع</h4>
+									</div>
+								</div>
+							    <div class="icon-box-12">
+									<figure>
+										<img src="assets/images/steps-therapy/choose.png">
+									</figure>
+									<div class="icon-box-content-12">
+										<h4 class="box-title">اختار احد الأطباء</h4>
+									</div>
+								</div>
+								<div class="icon-box-12">
+									<figure>
+										<img src="assets/images/steps-therapy/select.png">
+									</figure>
+									<div class="icon-box-content-12">
+										<h4 class="box-title">حدد الوقت المناسب</h4>
+									</div>
+								</div>
+								<div class="icon-box-12">
+									<figure>
+										<img src="assets/images/steps-therapy/start.png"">
+									</figure>
+									<div class="icon-box-content-12">
+										<h4 class="box-title">ابدأ جلستك</h4>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+		</main>
+		<!------------------------------------------------
+		footer - start
+		------------------------------------------------>
+		<footer class="footer">
+			<div class="footer-content">
+			  <p>2025 All Rights Reserved</p>
+			  <img src="assets/images/logo-sm.png" alt="Logo">
+			</div>
+		</footer>
+		  
+		<!------------------------------------------------
+		footer - end
+		------------------------------------------------>
+	</div>
+	<!---slides-->
+	<script>
+		let slideIndex = 1;
+		showSlides(slideIndex);
+	  
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+	  
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+	  
+		function showSlides(n) {
+		  let i;
+		  const slides = document.getElementsByClassName("mySlides");
+		  const dots = document.getElementsByClassName("dot");
+		  const prev = document.querySelector(".prev");
+		  const next = document.querySelector(".next");
+	  
+		  if (n > slides.length) slideIndex = slides.length;
+		  if (n < 1) slideIndex = 1;
+	  
+		  for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";
+		  }
+	  
+		  for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		  }
+	  
+		  slides[slideIndex - 1].style.display = "block";
+		  dots[slideIndex - 1].className += " active";
+	  
+		  // إظهار/إخفاء الأسهم
+		  prev.style.display = (slideIndex === 1) ? "none" : "block";
+		  next.style.display = (slideIndex === slides.length) ? "none" : "block";
+		}
+	</script>
+	<!---loading-->
+	
+	<script>
+		window.addEventListener('load', function() {
+        const loadingScreen = document.querySelector('.loading-screen');
+        const pageWrapper = document.querySelector('.page-wrapper');
+
+        loadingScreen.classList.add('loaded');
+        setTimeout(() => {
+            pageWrapper.classList.add('loaded');
+            }, 500); // تأخير نصف ثانية (500 مللي ثانية)
+        });
+
+	
+	  //mouse//
+
+
+        let mybutton = document.getElementById("myBtn");
+
+		
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+		
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+
+                       document.addEventListener('DOMContentLoaded', function() {
+  const membershipSection = document.querySelector('.membership-section');
+  const cardContents = document.querySelectorAll('.card-content');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        cardContents.forEach((card, index) => {
+          setTimeout(() => {
+            card.classList.add('show');
+          }, 200 * index); // تأخير 200 مللي ثانية لكل بطاقة
+        });
+        observer.unobserve(membershipSection); // إيقاف المراقبة بعد الظهور
+      }
+    });
+  }, {
+    threshold: 0.1 // جزء من العنصر يجب أن يكون مرئياً لبدء التنفيذ (10%)
+  });
+
+  observer.observe(membershipSection);
+});
+		
+       
+	</script>
+</body>
+</html>

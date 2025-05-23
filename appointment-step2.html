@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+	<title>Shulife - Appointment Step 2</title>
+      <link rel="icon" type="image/x-icon" href="favicon-01.png">
+
+
+	<meta name="keywords" content="Caremed HTML5 Responsive Template Medicine COVID-19 Corona Hospital" />
+	<meta name="description" content="Caremed - Hospital HTML5 Responsive Template">
+	
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+    <!------------------------------------------------
+	loading overlay - start
+	------------------------------------------------>
+	<div class="loading-screen">
+        <img src="assets/images/SHULIFE-03.png" alt="جارٍ التحميل...">
+    </div>
+	<!------------------------------------------------
+	loading overlay - end
+	------------------------------------------------>
+    <div class="page-wrapper">
+        <!------------------------------------------------
+		    navigation - start
+        ------------------------------------------------>
+		<header class="header">
+            <div class="header-top">
+                <div class="top-manu">
+					<ul class="top-list">
+                        <li>
+							<i class="bi bi-telephone-fill"></i>
+							009642873122650 
+						</li>
+                        <li>
+							<i class="bi bi-envelope-fill"></i>
+							therapy.online.2025@gmail.com
+						</li>
+                    </ul>
+				</div> 
+            </div>
+            <div class="header-middle-sticky-header">
+                <div class="header-left">
+                    <img src="assets/images/logo.png" alt="Caremed Logo" width="185" height="48">
+                </div>
+                <div class="header-right">
+                   
+                    <nav class="main-nav">
+                        <ul class="ul-menu">
+                                <li>
+                                    <a href="index.html">الصفحة الرئيسية</a>
+                                </li>
+                                <li>
+                                    <a href="about.html">من نحن</a>
+                                </li>
+                                <li>
+                                   <a href="doctors.html">فريقنا</a>
+                                </li>
+                                <li>
+                                    <a href="contact-us.html">تواصل معنا</a>
+                                </li>
+                            </ul>
+                    </nav><!-- End .main-nav -->
+                    
+                    <a href="appointment-step2.html" class="btn-appointment">
+						<span>احجز موعد</span>
+					</a>
+                    <a href="login.html" class="btn-login">
+						<span>تسجيل الدخول</span>
+					</a>
+                </div>
+            </div>
+        </header>
+		<!------------------------------------------------
+		navigation - end
+		------------------------------------------------>
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="bi bi-chevron-double-up"></i></button>
+        <main class="main">
+            <!------------------------------------------------
+		    page header - start
+		    ------------------------------------------------>
+            <div class="page-header bg-more-light">
+                <div class="container">
+                    <h1 class="page-title">احجز موعد</h1>
+                </div>
+            </div>
+            <!------------------------------------------------
+		    page header - end
+		    ------------------------------------------------>
+           
+            
+            <!------------------------------------------------
+		    content - start
+		    ------------------------------------------------>
+            <div class="form-appointment">
+                <div class="form-container-p">
+                    <div class="form-header-p">احجز موعد</div>
+                    <form>
+                      <div class="input-group-p">
+                        <div class="input-icon-p">
+                          <input type="text" placeholder="*الأسم" required>
+                          <i class="bi bi-person"></i>
+                        </div>
+                        <div class="input-icon-p">
+                          <input type="email" placeholder="*البريد الألكتروني"" required>
+                          <i class="bi bi-envelope"></i>
+                        </div>
+                        <div class="input-icon-p">
+                            <input type="text" placeholder="*رقم الهاتف" required>
+                            <i class="bi bi-telephone-fill"></i>
+                          </div>
+                          <div class="input-icon-p">
+                            <input type="text" placeholder="*تاريخ الميلاد(يوم/شهر/سنة)" id="birthdate" min="1900-01-01" max="today" readonly required>
+                            <i id="calendar-icon" class="bi bi-calendar-date" ></i>
+                            <div class="calendar hidden" id="calendar"></div>
+                      </div>
+                      <textarea placeholder="اكتب نص" required></textarea>
+                      <button type="submit" class="send-button-p">
+                        ارسال<i class="bi bi-caret-right"></i>
+                      </button>
+                    </form>
+                </div>
+            </div>
+            <!------------------------------------------------
+		    content - end
+		    ------------------------------------------------>
+        </main>
+        <!------------------------------------------------
+		footer - start
+		------------------------------------------------>
+        <footer class="footer">
+			<div class="footer-content">
+			  <p>2025 All Rights Reserved</p>
+			  <img src="assets/images/logo-sm.png" alt="Logo">
+			</div>
+		</footer>
+		<!------------------------------------------------
+		footer - end
+		------------------------------------------------>
+    </div> 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const input = document.getElementById('birthdate');
+            const calendar = document.getElementById('calendar');
+          
+            let currentDate = new Date();
+            let selectedDate = null;
+          
+            function renderCalendar(date) {
+              calendar.innerHTML = '';
+          
+              const header = document.createElement('div');
+              header.className = 'calendar-header';
+          
+              const monthSelect = document.createElement('select');
+              const yearSelect = document.createElement('select');
+          
+              for (let m = 0; m < 12; m++) {
+                const option = document.createElement('option');
+                option.value = m;
+                option.text = new Date(0, m).toLocaleString('default', { month: 'short' });
+                if (m === date.getMonth()) option.selected = true;
+                monthSelect.appendChild(option);
+              }
+          
+              for (let y = 1900; y <= new Date().getFullYear(); y++) {
+                const option = document.createElement('option');
+                option.value = y;
+                option.text = y;
+                if (y === date.getFullYear()) option.selected = true;
+                yearSelect.appendChild(option);
+              }
+          
+              header.appendChild(monthSelect);
+              header.appendChild(yearSelect);
+              calendar.appendChild(header);
+          
+              const table = document.createElement('table');
+              table.className = 'calendar-table';
+          
+              const daysRow = document.createElement('tr');
+              const days = ['أحد','إثن','ثلث','أربع','خمس','جمع','سبت'];
+              days.forEach(day => {
+                const th = document.createElement('th');
+                th.innerText = day;
+                daysRow.appendChild(th);
+              });
+              table.appendChild(daysRow);
+          
+              const firstDay = new Date(date.getFullYear(), date.getMonth(), 1).getDay();
+              const totalDays = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+          
+              let row = document.createElement('tr');
+              for (let i = 0; i < firstDay; i++) {
+                row.appendChild(document.createElement('td'));
+              }
+          
+              for (let d = 1; d <= totalDays; d++) {
+                if (row.children.length === 7) {
+                  table.appendChild(row);
+                  row = document.createElement('tr');
+                }
+          
+                const td = document.createElement('td');
+                td.innerText = d;
+          
+                if (
+                  selectedDate &&
+                  d === selectedDate.getDate() &&
+                  date.getMonth() === selectedDate.getMonth() &&
+                  date.getFullYear() === selectedDate.getFullYear()
+                ) {
+                  td.classList.add('selected');
+                }
+          
+                td.addEventListener('click', () => {
+                  selectedDate = new Date(date.getFullYear(), date.getMonth(), d);
+                  input.value = `${d}/${date.getMonth() + 1}/${date.getFullYear()}`;
+                  calendar.classList.add('hidden');
+                });
+          
+                row.appendChild(td);
+              }
+          
+              while (row.children.length < 7) {
+                row.appendChild(document.createElement('td'));
+              }
+          
+              table.appendChild(row);
+              calendar.appendChild(table);
+          
+              monthSelect.addEventListener('change', () => {
+                currentDate.setMonth(parseInt(monthSelect.value));
+                renderCalendar(currentDate);
+              });
+          
+              yearSelect.addEventListener('change', () => {
+                currentDate.setFullYear(parseInt(yearSelect.value));
+                renderCalendar(currentDate);
+              });
+            }
+          
+            input.addEventListener('focus', () => {
+              calendar.classList.remove('hidden');
+              renderCalendar(currentDate);
+            });
+          
+            document.addEventListener('click', (e) => {
+              if (!calendar.contains(e.target) && e.target !== input) {
+                calendar.classList.add('hidden');
+              }
+            });
+          });
+          
+    </script>
+    <!---loading-->
+	
+	    <script>
+		    window.addEventListener('load', function() {
+        const loadingScreen = document.querySelector('.loading-screen');
+        const pageWrapper = document.querySelector('.page-wrapper');
+
+        loadingScreen.classList.add('loaded');
+        setTimeout(() => {
+            pageWrapper.classList.add('loaded');
+            }, 500); // تأخير نصف ثانية (500 مللي ثانية)
+        });
+	    </script>
+      <!--mouse-->
+	    <script>
+
+        let mybutton = document.getElementById("myBtn");
+
+		
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+		
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+      </script>
+
+</body>
+</html>
